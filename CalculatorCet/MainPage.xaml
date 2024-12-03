@@ -15,10 +15,10 @@
                     <RowDefinition Height="60"></RowDefinition>
                     <RowDefinition Height="60"></RowDefinition>
                     <RowDefinition Height="60"></RowDefinition>
-                    <RowDefinition Height="60">
-                    </RowDefinition>
+                    <RowDefinition Height="60"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"></ColumnDefinition>
                     <ColumnDefinition Width="60"></ColumnDefinition>
                     <ColumnDefinition Width="60"></ColumnDefinition>
                     <ColumnDefinition Width="60"></ColumnDefinition>
@@ -29,7 +29,8 @@
                 <Button Text="7" x:Name="DigitSeven" Clicked="Digit_Clicked" ></Button>
                 <Button Text="8" x:Name="DigitEight" Clicked="Digit_Clicked" Grid.Column="1" ></Button>
                 <Button Text="9" x:Name="DigitNine"  Clicked="Digit_Clicked" Grid.Column="2"></Button>
-
+                <Button Text="MS" x:Name="MSbtn" Clicked="MSbtn_Clicked" Grid.Column="5" Grid.Row="0" Grid.RowSpan="2"></Button>
+                <Button Text="MR" x:Name="MRbtn" Clicked="MRbtn_Clicked" Grid.Column="5" Grid.Row="2" Grid.RowSpan="2"></Button>
 
 
 
@@ -44,43 +45,44 @@
 
 
                 <Button Text="0" x:Name="DigitZero"  Clicked="Digit_Clicked" Grid.Row="3" ></Button>
-                <Button Text="=" x:Name="EqualButton" Clicked="EqualButton_Clicked"  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" ></Button>
-                
-                    <Button Grid.Row="0" Grid.Column="3"
+                <Button Text="," x:Name="decimalbutton" Clicked="decimalbutton_Clicked" Grid.Row="3" Grid.Column="1"></Button>
+                <Button Text="=" x:Name="EqualButton" Clicked="EqualButton_Clicked"  Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="1" ></Button>
+
+                <Button Grid.Row="0" Grid.Column="3"
                         x:Name="AddButton" Text="+" Clicked="AddButton_Clicked"
                         VerticalOptions="Fill" />
-                    <Button  Grid.Row="1" Grid.Column="3"
-                      x:Name="SubtractButton"
-                      Text="-" 
-           Clicked="SubtractButton_Clicked"
+                <Button Grid.Row="1" Grid.Column="3"
+                        x:Name="SubtractButton"
+                        Text="-" 
+                        Clicked="SubtractButton_Clicked"
                         VerticalOptions="Fill" />
-                    <Button  Grid.Row="2" Grid.Column="3"
+                <Button Grid.Row="2" Grid.Column="3"
                         x:Name="MultiplyButton"   Text="X"   Clicked="MultiplyButton_Clicked"
                         VerticalOptions="Fill" />
 
-                <Button  Grid.Row="3" Grid.Column="3"
-         x:Name="DivideButton"     Text="/"        Clicked="DivideButton_Clicked"
-         VerticalOptions="Fill" />
+                <Button Grid.Row="3" Grid.Column="3"
+                        x:Name="DivideButton"     Text="/"        Clicked="DivideButton_Clicked"
+                        VerticalOptions="Fill" />
 
                 <Button Text="CE" x:Name="CEButton" Clicked="CEButton_Clicked"  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" ></Button>
                 <Button Text="C" x:Name="CButton" Clicked="CButton_Clicked"  Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" ></Button>
 
             </Grid>
-            
-            
-            
+
+
+
             <HorizontalStackLayout Spacing="20">
-                
+
             </HorizontalStackLayout>
-           
+
             <Label
                 x:Name="Result"
                 Text=""
                  />
 
-          
 
-            
+
+
         </VerticalStackLayout>
     </ScrollView>
 
